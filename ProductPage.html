@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Part 1 - Online Store Product Page</title>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+
+<!--
+    block for header contents
+-->
+<div class="header">
+  <div class="header-back">
+    <div class="subtitle">
+      Retro Videogame Store
+    </div>
+  </div>
+  <header>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">Products</button>
+          <div class="dropdown-content">
+            <a href="#">Consoles</a>
+            <a href="#">Games</a>
+            <a href="#">Repair parts</a>
+            <a href="#">Peripherals</a>
+          </div>
+        </div>
+        <li><a href="ShoppingCart.html">View Cart</a></li>
+      </ul>
+    </nav>
+    <form class="search" style="margin:auto;max-width:300px">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <a class="cta" href="#"><button>Contact us</button></a>
+    <a class="cta" href="#"><button>Login</button></a>
+  </header>
+</div>
+
+
+
+<!--
+    block for product page
+-->
+<div class="pagetitle">
+  <a href="#">Home</a> > 
+  <a href="#">Products</a> > 
+  <a href="#">Peripherals</a> 
+</div>
+<div class="product">
+  <div class="productimage">
+    <img src='images/product.jpg' class='product'>
+  </div>
+  <div class="productdescription">
+    <span class="row">
+      <h2>
+        Grey Sony PS1 Analog Controller Playstation
+      </h2>
+    </span>
+    <span class="row">
+      <h3>
+        Rating: 
+      </h3>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </span>
+    <span class="row">
+      <h3>
+        Price:
+      </h3>
+      <h4>
+        $9.99 CAD
+      </h4>
+    </span>
+    <span class="row">
+      <h3>
+        Brand: 
+      </h3>
+      Sony
+    </span>
+    <span class="row">
+      <h3>
+        Type: 
+      </h3>
+      Controller
+    </span>
+    <span class="row">
+      <h3>
+        Description: 
+      </h3>
+      Used
+    </span>
+    <form>
+      <span class="row">
+        <label for="quantity">
+          <h3>Quantity:</h3>
+        </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="1">
+        <input type="submit" value="Add to Cart">
+      </span>
+    </form>
+  </div>
+</div>
+
+
+<!--
+    block for footer contents
+-->
+
+<div class="footer">
+  <div class="footertext">
+    <p><h3>Contact Information</h3></p>
+    <p>Email: CST8285@algonquinlive.com</p>
+    <p>Phone: 613-555-5555</p>
+  </div>
+</div>
+
+</body>
+</html>
