@@ -1,0 +1,370 @@
+/*THIS IS THE CSS SHEET FOR THE HEADER STYLING ONLY*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/*Font style*/
+
+* {
+  background-color: rgb(228, 214, 183, );
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+div.subtitle {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 80px;
+  padding-left: 190px;
+  color: #24252A;
+}
+
+div.header-back {
+  margin: 0 auto;
+  border: 0 auto;
+  padding: 0 auto;
+  width: 100vw;
+  height: 130px;
+  background-image: url('images/headerimg.png');
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-color: rgb(123, 203, 243);
+  background-position: 100vw 100vh -15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #24252A;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  list-style: none;
+}
+
+.nav-bar li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-bar li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-bar li a:hover {
+  color: rgb(247, 166, 146);
+}
+
+.cta button {
+  padding: 10px 15px;
+  background-color: rgba(0, 137, 170, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: rgba(228, 214, 183, 0.8);
+}
+
+a,
+li,
+button {
+  padding-top: auto;
+  width: auto;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-align-last: center;
+}
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+form.search button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #24252A;
+  color: white;
+  font-size: 17px;
+  /*border: 1px solid grey;*/
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #547890;
+}
+
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.dropbtn {
+  background-color: #24252A;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(247, 166, 146);
+  /* #ddd;*/
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #24252A;
+  color: rgb(247, 166, 146);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+}
+
+input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid grey;
+  float: right;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+
+/*footer*/
+
+.footer {
+  margin-top: 10%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #24252A;
+  color: white;
+  text-align: left;
+}
+
+.footertext {
+  padding: 20px 5%;
+}
+
+.footertext h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+}
+
+.footertext p {
+  font-size: 8pt;
+  padding: 5px;
+}
+
+
+/*product page*/
+
+div.pagetitle {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+}
+
+div.product {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div.productimage {
+  float: left;
+}
+
+div.productimage img {
+  margin-left: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+div.pagetitle a {
+  font-size: 10pt;
+  color: rgb(236, 112, 83);
+}
+
+div.productdescription h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+div.productdescription h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+  color: rgb(84, 120, 144);
+}
+
+div.productdescription h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15pt;
+  color: rgba(0, 137, 170, 1);
+}
+
+span {
+  display: block;
+  padding: 5px;
+}
+
+div.product input {
+  padding: 10px 15px;
+  background-color: rgba(0, 137, 170, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-align-last: center;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(228, 214, 183, 0.8);
+}
+
+input[type=number] {
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+}
+
+::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.checked {
+  color: rgb(236, 112, 83);
+}
+
+
+/*search results*/
+
+.searchresults {
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(190, 190, 190, 0.8);
+  margin: 2px;
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+}
+
+img.searchresultimage {
+  max-width: 50%;
+  height: 200px;
+}
+
+.rating {
+  width: 40%;
+  font-size: 10.5px;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  /*center element*/
+}
+
+.searchresults input {
+  padding: 10px 15px;
+  background-color: rgba(0, 137, 170, 1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-align-last: center;
+}
+
+.searchoptions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchoptions-item {
+  margin: 2px;
+  padding: 20px;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Part 1 - Online Store Product Page</title>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--
+      block for header contents
+      -->
+    <div class="header">
+      <div class="header-back">
+        <div class="subtitle">
+          Retro Videogame Store
+        </div>
+      </div>
+      <header>
+        <nav>
+          <ul class="nav-bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Products</button>
+              <div class="dropdown-content">
+                <a href="#">Consoles</a>
+                <a href="#">Games</a>
+                <a href="#">Repair parts</a>
+                <a href="#">Peripherals</a>
+              </div>
+            </div>
+            <li><a href="ShoppingCart.html">View Cart</a></li>
+          </ul>
+        </nav>
+        <form class="search" style="margin:auto;max-width:300px">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <a class="cta" href="#"><button>Contact us</button></a>
+        <a class="cta" href="#"><button>Login</button></a>
+      </header>
+    </div>
+    <!--
+      block for search results contents
+      -->
+    <div class="pagetitle">
+      <a href="#">Home</a> > 
+      <a href="#">Search Results</a> 
+    </div>
+    <div class="searchresults">
+      <h2>Search results for "console":</h2>
+      <br><br>
+      <div class="searchoptions">
+        <div class="searchoptions-item">
+          <label for="checkbox">
+            <h2>Filter by Price:</h2>
+          </label>
+          <input type="checkbox" id="price1" name="price1" value=">25">
+          <label for="price1">Under $25</label><br>
+          <input type="checkbox" id="price2" name="price2" value="25">
+          <label for="price2">$25 - $75</label><br>
+          <input type="checkbox" id="price3" name="price3" value="75">
+          <label for="price3">$75 - $150</label><br>
+          <input type="checkbox" id="price4" name="price4" value="150">
+          <label for="price4">$150 - $300</label><br>
+          <input type="checkbox" id="price5" name="price5" value="300<">
+          <label for="price5">Over $300</label><br>
+          <br><br>
+        </div>
+        <div class="searchoptions-item">
+          <h2>Filter by Rating:</h2>
+          <input type="radio" id="rating1" name="rating" value="1star">
+          <label for="rating1">1 Star and Up</label><br>
+          <input type="radio" id="rating2" name="rating" value="2star">
+          <label for="rating2">2 Stars and Up</label><br>  
+          <input type="radio" id="rating3" name="rating" value="3star">
+          <label for="rating3">3 Stars and Up</label><br>
+          <input type="radio" id="rating4" name="rating" value="4star">
+          <label for="rating4">4 Stars and Up</label><br>
+          <input type="radio" id="rating5" name="rating" value="5star">
+          <label for="rating5">5 Stars and Up</label><br><br>
+        </div>
+        <div class="searchoptions-item">
+          <h2>Sort By:</h2>
+          <input type="radio" id="sort1" name="sort" value="Best rating">
+          <label>Best rating</label><br>
+          <input type="radio" id="sort2" name="sort" value="Lowest price first">
+          <label>Lowest price first</label><br>  
+          <input type="radio" id="sort3" name="sort" value="Highest price first">
+          <label>Highest price first</label><br><br>
+        </div>
+        <div class="searchoptions-item">
+          <input type="submit" value="Submit">
+        </div>
+        <hr class="solid">
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src='images/searchresult/product.jpg' class='searchresultimage'>
+          <span class="row">
+            <h2>
+              Grey Sony PS1 Analog Controller Playstation
+            </h2>
+          </span>
+          <span class="rating">
+            <h2>
+              Rating: 
+            </h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </span>
+          <span class="row">
+            <h2>
+              Price:
+            </h2>
+            $12.99 CAD
+            <form>
+              <input type="submit" value="Add to Cart">
+            </form>
+          </span>
+        </div>
+        <div class="grid-item">
+          <img src='images/searchresult/product1.jpg' class='searchresultimage'>
+          <span class="row">
+            <h2>
+              PlayStation System PS1 Console
+            </h2>
+          </span>
+          <span class="rating">
+            <h2>
+              Rating: 
+            </h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </span>
+          <span class="row">
+          <h2>
+            Price:
+          </h2>
+          $64.99 CAD
+          <form>
+            <input type="submit" value="Add to Cart">
+          </form>
+        </div>
+        <div class="grid-item">
+          <img src='images/searchresult/product2.jpg' class='searchresultimage'>
+          <span class="row">
+            <h2>
+              Game Boy Pocket Green MGB-001 System Console
+            </h2>
+          </span>
+          <span class="rating">
+            <h2>
+              Rating: 
+            </h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </span>
+          <span class="row">
+          <h2>
+            Price:
+          </h2>
+          $89.99 CAD
+          <form>
+            <input type="submit" value="Add to Cart">
+          </form>
+        </div>
+        <div class="grid-item">
+          <img src='images/searchresult/product3.jpg' class='searchresultimage'>
+          <span class="row">
+            <h2>
+              Nintendo 64 System Jungle Green Console N64
+            </h2>
+          </span>
+          <span class="rating">
+            <h2>
+              Rating: 
+            </h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </span>
+          <span class="row">
+          <h2>
+            Price:
+          </h2>
+          $249.99 CAD
+          <form>
+            <input type="submit" value="Add to Cart">
+          </form>
+        </div>
+        <div class="grid-item">
+          <img src='images/searchresult/product4.jpg' class='searchresultimage'>
+          <span class="row">
+            <h2>
+              Gamecube System Platinum Silver Console
+            </h2>
+          </span>
+          <span class="rating">
+            <h2>
+              Rating: 
+            </h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </span>
+          <span class="row">
+          <h2>
+            Price:
+          </h2>
+          $119.99 CAD
+          <form>
+            <input type="submit" value="Add to Cart">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--
+      block for footer contents
+      -->
+    <div class="footer">
+      <div class="footertext">
+        <p>
+        <h3>Contact Information</h3>
+        </p>
+        <p>Email: CST8285@algonquinlive.com</p>
+        <p>Phone: 613-555-5555</p>
+      </div>
+    </div>
+  </body>
+</html>

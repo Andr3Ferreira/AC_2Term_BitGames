@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Project Part 1 - Online Store Product Page</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+<!--
+    -Product page:
+-->
+
+<!--
+    block for header 
+-->
+  <div class="header">
+    <div class="header-text">
+      <h1><a href="landingpage.html">RetroGames</a></h1> 
+      <p>Online store</p>
+    </div>
+    <div id="nav-bar" class="nav-bar">
+      <ul>
+        <li><a href="landingpage.html">About</a></li>
+        <li><a href="landingpage.html">Products</a></li> 
+        <li><a href="landingpage.html">Sign Up</a></li>
+        <li><a href="landingpage.html">View Cart</a></li>
+        <li><form action="search"></form></li>
+      </ul>
+    </div>
+  </div>
+
+<!--
+    block for product page
+-->
+<div class="product">
+  <img src='https://cdn.pixabay.com/photo/2017/04/04/18/18/video-game-console-2202663_960_720.jpg' class='product'>
+  <div class="productdescription">
+    <p style="font-size:30px; font-weight:bold; padding-top: 20px;">
+        Item title
+    </p>
+    <span class="row">
+        <h2 style="font-size:24px; font-weight:bold; font-style:italic; text-indent:20px; padding: -20px;">
+            $70
+        </h2>
+    </span>
+    <span class="row">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </span>
+    <form>
+      <span class="row">
+        <label for="quantity"><strong>Quantity:</strong></label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="1">
+        <input type="submit" value="Add to Cart">
+      </span>
+    </form>
+
+    <span class="row">
+        Rating:
+    </span>
+
+  </div>
+</div>
+
+
+</body>
+</html>
