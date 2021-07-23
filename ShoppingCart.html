@@ -1,112 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Project Part 1 - Online Store Product Page</title>
     <link rel="stylesheet"  href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"  href="shoppingcartstyle.css">
-  
-</head>
-<body>
-
-   <div class="header">
-    <div class="header-back">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-back">
         <div class="subtitle">
-        Retro Videogame Store
+          Retro Videogame Store
         </div>
+      </div>
+      <header>
+        <nav>
+          <ul class="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Products</button>
+              <div class="dropdown-content">
+                <a href="#">Consoles</a>
+                <a href="#">Games</a>
+                <a href="#">Repair parts</a>
+                <a href="#">Peripherals</a>
+              </div>
+            </div>
+            <li><a href="ShoppingCart.html">View Cart</a></li>
+          </ul>
+        </nav>
+        <form class="search" style="margin:auto;max-width:300px">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <a class="cta" href="#"><button>Contact us</button></a>
+        <a class="cta" href="SignUpPage.html"><button>Login</button></a>
+      </header>
     </div>
-    <header>
-        
-        <!--The top background-->
-            <!--Navbar with dropdown menu with the featured products separated by categories/sub-categories-->
-            <!--<img class="logo" src="C:\Users\andr3\Downloads\gamepad.png" alt="logo">-->
-            <nav>
-                <ul class="nav-bar">
-                    <li><a href="landingpage.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Products</button>
-                        <div class="dropdown-content">
-                            <a href="#">Consoles</a>
-                            <a href="#">Games</a>
-                            <a href="#">Repair parts</a>
-                            <a href="#">Peripherals</a>
-                        </div>
-                    <!--<li><a href="#">Products</a></li>-->
-                    </div>
-                    <li><a href="ShoppingCart.html">View Cart</a></li>
-                </ul>
-            </nav>
-            <form class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <a class="cta" href="#"><button>Contact us</button></a>
-            <a class="cta" href="SignUpPage.html"><button>Login</button></a>
-            
-    </header>
-</div>
-
-
-
-<!--
-    block for cart page
--->
-<div class="main">
-    <h1>Shopping Cart</h1>
-
-    <h2>View List</h2>
-
-    <div class="item">
-
-     
+    <!--
+      block for cart page
+      -->
+    <div class="shoppingcart">
+      <!-- page title -->
+      <h1>Shopping Cart</h1>
+      <h2>View List</h2>
+      <!--item in cart-->
+      <div class="item">
         <div class="image">
           <img src="https://images-ext-1.discordapp.net/external/-8yUC2y7jYstlD0IZgYTVpcZksQIFIznHm3urGx11WY/https/i.etsystatic.com/21859309/r/il/370c61/2578506524/il_570xN.2578506524_o73c.jpg" width="200" alt="" />
         </div>
-     
         <div class="description">
           <span>Gameboy Advanced SP Replacement Battery</span>
           <span>Price: $16.99</span>
         </div>
-     
         <div class="quantity">
-            <span><h2>Quantity</h2></span>
-            <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="1">
+          <span>
+            <h2>Quantity</h2>
+          </span>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="0">
         </div>
-
-     
-
         <div class="buttons">
-            <span class="save-btn">
-                <input type="button" value="Save"   onclick="SaveItem()">
-              </span>
-            <span class="remove-btn">
-              <input type="button" value="Remove" onclick="RemoveItem()">
-            </span>
-            
+          <span class="save-btn">
+          <input type="button" value="Save">
+          </span>
+          <span class="remove-btn">
+          <input type="button" value="Remove">
+          </span>
         </div>
-
+        <!--total price -->
         <div class="total-price">
-            <span><h2>Total Price:</h2></span>
-            <span>$16.99</span>
+          <span>
+            <h2>Total Price:</h2>
+          </span>
+          <span>$16.99</span>
         </div>
-     
-        
       </div>
-</div>
-
-<!--
-    footer
--->
-<div class="footer">
-  <div class="footertext">
-    <p><h3>Contact Information</h3></p>
-    <p>Email: CST8285@algonquinlive.com</p>
-    <p>Phone: 613-555-5555</p>
-  </div>
-</div>
-
-</body>
+    </div>
+    <!--
+      footer
+      -->
+    <div class="footer">
+      <div class="footertext">
+        <p>
+        <h3>Contact Information</h3>
+        </p>
+        <p>Email: CST8285@algonquinlive.com</p>
+        <p>Phone: 613-555-5555</p>
+        <div class="social">
+          <a href="#">INSTAGRAM </a>
+          <a href="#">FACEBOOK </a>
+          <a href="#">TWITTER </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
-
 <!--https://designmodo.com/shopping-cart-ui/-->

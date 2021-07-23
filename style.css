@@ -1,9 +1,10 @@
-/*THIS IS THE CSS SHEET FOR THE HEADER STYLING ONLY*/
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/*This is the styling sheet for bitgames*/
 
 /*Font style*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+
+/*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height.*/
 * {
   background-color: rgb(228, 214, 183, );
   box-sizing: border-box;
@@ -12,6 +13,7 @@
   padding: 0;
 }
 
+/*subtitle RETRO VIDEOGAMES STORE*/
 div.subtitle {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -24,7 +26,7 @@ div.header-back {
   margin: 0 auto;
   border: 0 auto;
   padding: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: 130px;
   background-image: url('images/headerimg.png');
   background-repeat: no-repeat;
@@ -37,7 +39,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 5%;
+  padding: 0px;
   background-color: #24252A;
   margin: 0 auto;
 }
@@ -60,13 +62,13 @@ header {
 }
 
 .cta button {
-  padding: 10px 15px;
+  padding: 5px 10px;
   background-color: rgba(0, 137, 170, 1);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  margin: 5px;
+  margin: 3px;
 }
 
 button:hover {
@@ -162,6 +164,8 @@ form.search::after {
   color: rgb(247, 166, 146);
 }
 
+/*font styling*/
+
 h1 {
   font-family: "Montserrat", sans-serif;
 }
@@ -181,7 +185,7 @@ input[type=text] {
 }
 
 
-/*footer*/
+/*************footer***********/
 
 .footer {
   margin-top: 10%;
@@ -191,24 +195,41 @@ input[type=text] {
   background-color: #24252A;
   color: white;
   text-align: left;
+  display: inline-block;
+  
 }
 
 .footertext {
-  padding: 20px 5%;
+  padding: 20px 15%;
 }
 
 .footertext h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 12pt;
+  font-size: 16pt;
 }
 
 .footertext p {
-  font-size: 8pt;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
   padding: 5px;
 }
 
+.footer .social {
+  justify-content: space-evenly;
+  text-align: end;
+}
 
-/*product page*/
+.footer .social a {
+  transition: all 0.3s ease 0s;
+  padding: 2px 2px;
+  margin: 5px;
+}
+
+.footer .social a:hover {
+  color: rgb(247, 166, 146);
+}
+
+/**********product page**********/
 
 div.pagetitle {
   margin-top: 20px;
@@ -219,7 +240,7 @@ div.pagetitle {
 }
 
 div.product {
-  margin-top: 10px;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   margin-left: 5%;
@@ -227,7 +248,8 @@ div.product {
 }
 
 div.productimage {
-  float: left;
+  justify-content: center;
+  width: 400px;
 }
 
 div.productimage img {
@@ -308,17 +330,25 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/*search results*/
+/*********search results**********/
 
 .searchresults {
   margin-top: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 89%;
+  
 }
 
 .grid-container {
-  display: flex;
   flex-wrap: wrap;
+  display: grid;
+  float:right;
+  justify-content: justify;
+  width: 70%;
+  grid-template-columns: auto auto auto; 
+  grid-gap: 10px;
+  margin: 10px 10px;
 }
 
 .grid-item {
@@ -327,12 +357,13 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 2px;
   padding: 20px;
   text-align: center;
-  width: 400px;
+  width: 300px;
 }
 
 img.searchresultimage {
-  max-width: 50%;
+  max-width: 60%;
   height: 200px;
+  justify-content: center;
 }
 
 .rating {
@@ -340,7 +371,6 @@ img.searchresultimage {
   font-size: 10.5px;
   font-family: "Montserrat", sans-serif;
   margin: auto;
-  /*center element*/
 }
 
 .searchresults input {
@@ -351,87 +381,237 @@ img.searchresultimage {
   cursor: pointer;
   transition: all 0.3s ease 0s;
   margin: 5px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: #edf0f1;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   text-align-last: center;
+  position:relative;
 }
 
+
 .searchoptions {
-  display: flex;
+  float: left;
+  display: -ms-flexbox;
   flex-wrap: wrap;
+  margin-top: 120px;
+  margin-right: 0;
+  margin-left: 20px;
+  border-style: hidden;
+  border-radius: 5%;
+  padding: 20px; 
+  position:relative;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  
 }
 
 .searchoptions-item {
   margin: 2px;
-  padding: 20px;
+  padding: 2px;
+  justify-content:justify;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: -ms-flexbox;
+}
+.searchoptions-item label:hover {
+  color: rgb(247, 166, 146);
 }
 
-/* Featured products */
+/********** Featured products ********/
 
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.promotion{
+  text-align:center;
   width: 100%;
+  height: 40px;
+  padding: 5px 5px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-/*.grid-container{
-  display: grid;
-  grid: 150px / auto auto auto; 
-}
-
-.grid-container > grid {
-  text-align: center;
-  padding: 20px 0;
+.promotion .text{
+  padding: 10px;
   font-size: 30px;
-  align-items: flex-end;
-}*/
-
-.desaturate {
-  filter: grayscale(100%); /* Standard CSS */
-  -webkit-filter: grayscale(100%); /* CSS for Webkit Browsers */
-  filter: url(/elements/grayscale.svg#desaturate); /* Firefox 4-34 */
-  filter: gray;  /* Internet Explorer IE6-9 */
-  -webkit-filter: grayscale(1); /* Old WebKit Browsers */
+  font-family: "Montserrat", sans-serif;
 }
 
-.desaturate:hover {
-  filter: grayscale(0%);
-  filter: none;
-  -webkit-filter: grayscale(0); /* Old WebKit */
+.grid-featured{
+  display: grid;
+  justify-content: center;
+  width: auto;
+  grid-template-columns: auto auto auto auto; 
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.grid-element{
+  padding: auto;
+  width: auto;
+  height: auto;
+}
+
+.grid-element {
+  position: relative;
+  padding: 0;
+  width: 300px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.content {
+  opacity: 0;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(228, 214, 183, 1);
+  background-color: rgba(200, 200, 200, 1);
+  width: 300px;
+  height: 300px;
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+.grid-element .content:hover {
+  opacity: 0.5;
+}
+.grid-element .content .text {
+  height: 0;
+  opacity: 5;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  color: black;
+}
+.grid-element .content:hover .text {
+  opacity: 0.9;
+  transform: translateY(250px);
+  -webkit-transform: translateY(250px);
+}
+
+/********** sign up form ********/
+
+
+.signupform{
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10vh;
+  justify-content: center;
+}
+
+.signupform .row{
+  display: block;
+  padding: 10px;
+  text-align:center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signupform label{
+  padding: 10px;
+  font-size: 20px;
+}
+
+.signupform input[type='password']{
+  border: 1px solid grey;
+  width: 70%;
+  float: right;
+  background: #f1f1f1;
+  height: 40px;
+}
+
+.signupform input[type=submit] {
+  padding: 10px 15px;
+  background-color: rgba(0, 137, 170, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: all 0.3s ease 0s;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-align-last:center;
+
+}
+
+.signupform input[type=submit]:hover{
+  background-color: rgba(228,214,183, 0.8);
+}
+
+/********** shopping cart ********/
+
+.shoppingcart {
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.shoppingcart .row{
+  display: block;
+  margin: 20px;
+  text-align:center;
+  
+}
+
+.shoppingcart label{
+  padding: 10px;
+  font-size: 20px;
+}
+
+.shoppingcart input[type='password']{
+  border: 1px solid grey;
+  width: 70%;
+  float: right;
+  background: #f1f1f1;
+  height: 40px;
+}
+
+
+.shoppingcart input[type=button] {
+  padding: 7px 10px;
+  background-color: rgba(0, 137, 170, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-align-last:center;
+
+}
+
+.shoppingcart input[type=button]:hover{
+  background-color: rgba(228,214,183, 0.8);
+}
+
+.shoppingcart input[type=number]{
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color:black;/* #edf0f1;*/
+}
+
+
+.shoppingcart .quantity{
+  float: left;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+  opacity: 1;
 }

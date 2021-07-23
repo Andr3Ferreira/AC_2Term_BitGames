@@ -8,7 +8,9 @@
   <body>
     <!--
       block for header contents
-      -->
+    -->
+
+    <!--Subtitle -->
     <div class="header">
       <div class="header-back">
         <div class="subtitle">
@@ -16,9 +18,10 @@
         </div>
       </div>
       <header>
+        <!--Navigation bar -->
         <nav>
           <ul class="nav-bar">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <div class="dropdown">
               <button class="dropbtn">Products</button>
@@ -40,6 +43,7 @@
         <a class="cta" href="#"><button>Login</button></a>
       </header>
     </div>
+
     <!--
       block for search results contents
       -->
@@ -47,10 +51,15 @@
       <a href="#">Home</a> > 
       <a href="#">Search Results</a> 
     </div>
+
+    <!--Main page contents -->
     <div class="searchresults">
       <h2>Search results for "console":</h2>
-      <br><br>
+      
+
+      <!--Filter and Sort Search Results -->
       <div class="searchoptions">
+        <!--Filter by price -->
         <div class="searchoptions-item">
           <label for="checkbox">
             <h2>Filter by Price:</h2>
@@ -67,6 +76,9 @@
           <label for="price5">Over $300</label><br>
           <br><br>
         </div>
+
+
+        <!--Filter by rating -->
         <div class="searchoptions-item">
           <h2>Filter by Rating:</h2>
           <input type="radio" id="rating1" name="rating" value="1star">
@@ -80,6 +92,7 @@
           <input type="radio" id="rating5" name="rating" value="5star">
           <label for="rating5">5 Stars and Up</label><br><br>
         </div>
+        <!--sort by price or rating -->
         <div class="searchoptions-item">
           <h2>Sort By:</h2>
           <input type="radio" id="sort1" name="sort" value="Best rating">
@@ -89,143 +102,16 @@
           <input type="radio" id="sort3" name="sort" value="Highest price first">
           <label>Highest price first</label><br><br>
         </div>
+        <!--submit button -->
         <div class="searchoptions-item">
           <input type="submit" value="Submit">
         </div>
         <hr class="solid">
       </div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img src='images/searchresult/product.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Grey Sony PS1 Analog Controller Playstation
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </span>
-          <span class="row">
-            <h2>
-              Price:
-            </h2>
-            $12.99 CAD
-            <form>
-              <input type="submit" value="Add to Cart">
-            </form>
-          </span>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product1.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              PlayStation System PS1 Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $64.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product2.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Game Boy Pocket Green MGB-001 System Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $89.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product3.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Nintendo 64 System Jungle Green Console N64
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $249.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product4.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Gamecube System Platinum Silver Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $119.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
+
+      <!--Listed items -->
+      <div class="grid-container" id="productGrid">
+
       </div>
     </div>
     <!--
@@ -238,7 +124,14 @@
         </p>
         <p>Email: CST8285@algonquinlive.com</p>
         <p>Phone: 613-555-5555</p>
+        <div class="social">
+          <a href="#">INSTAGRAM </a>
+          <a href="#">FACEBOOK </a>
+          <a href="#">TWITTER </a>
+      </div>
       </div>
     </div>
+    <script src="scriptsearch.js"></script> 
+
   </body>
 </html>

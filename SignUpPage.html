@@ -4,9 +4,11 @@
     <title>Project Part 1 - Online Store Product Page</title>
     <link rel="stylesheet"  href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"  href="stylesignup.css">
   </head>
   <body>
+   <!--
+      block for header
+    -->
     <div class="header">
       <div class="header-back">
         <div class="subtitle">
@@ -16,7 +18,7 @@
       <header>
         <nav>
           <ul class="nav-bar">
-            <li><a href="landingpage.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <div class="dropdown">
               <button class="dropbtn">Products</button>
@@ -38,30 +40,43 @@
         <a class="cta" href="SignUpPage.html"><button>Login</button></a>
       </header>
     </div>
-    <div class="main">
+
+    <!--
+      block for sign up form
+    -->
+
+    <div class="signupform">
       <form>
+        <!--title -->
         <span class="row">
           <h1>Create Account</h1>
         </span>
+        <!--subtitle -->
         <span class="row">
           <h2>Register</h2>
         </span>
+        <!--form input -->
+        <!--first name-->
         <span class="row">
         <label for="fname">First Name:</label>
         <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
         </span>
+        <!--last name-->
         <span class="row">
         <label for="lname">Last Name:</label>
         <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
         </span>
+        <!--email-->
         <span class="row">
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" placeholder="Enter your email" required>
         </span>
+        <!--password-->
         <span class="row">
         <label for="pass">Password:</label>
         <input type="password" id="pass" name="password" required>
         </span>
+        <!--submit-->
         <span class="row">
         <input type="submit" id="submit" name="submit">
         </span>
@@ -77,8 +92,12 @@
         </p>
         <p>Email: CST8285@algonquinlive.com</p>
         <p>Phone: 613-555-5555</p>
+        <div class="social">
+          <a href="#">INSTAGRAM </a>
+          <a href="#">FACEBOOK </a>
+          <a href="#">TWITTER </a>
+        </div>
       </div>
     </div>
   </body>
 </html>
-<!--https://designmodo.com/shopping-cart-ui/-->
