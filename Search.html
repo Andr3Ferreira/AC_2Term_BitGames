@@ -8,7 +8,9 @@
   <body>
     <!--
       block for header contents
-      -->
+    -->
+
+    <!--Subtitle -->
     <div class="header">
       <div class="header-back">
         <div class="subtitle">
@@ -16,9 +18,10 @@
         </div>
       </div>
       <header>
+        <!--Navigation bar -->
         <nav>
           <ul class="nav-bar">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <div class="dropdown">
               <button class="dropbtn">Products</button>
@@ -34,198 +37,77 @@
         </nav>
         <form class="search" style="margin:auto;max-width:300px">
           <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
+          <button type="submit" onclick='window.open("search.html")'><i class="fa fa-search"></i></button>
         </form>
         <a class="cta" href="#"><button>Contact us</button></a>
         <a class="cta" href="#"><button>Login</button></a>
       </header>
     </div>
+
     <!--
       block for search results contents
       -->
     <div class="pagetitle">
-      <a href="#">Home</a> > 
-      <a href="#">Search Results</a> 
+      <a href="index.html">Home</a> > 
+      <a href="search.html">Search Results</a> 
     </div>
+
+    <!--Main page contents -->
     <div class="searchresults">
-      <h2>Search results for "console":</h2>
-      <br><br>
+      
+      
+
+      <!--Filter and Sort Search Results -->
       <div class="searchoptions">
+        <!--Filter by price -->
         <div class="searchoptions-item">
-          <label for="checkbox">
+          <label for="radio">
             <h2>Filter by Price:</h2>
           </label>
-          <input type="checkbox" id="price1" name="price1" value=">25">
+          <input type="radio" id="price1" name="filter" onclick="clearPage(); displayProduct(filterPrice(0, 25))">
           <label for="price1">Under $25</label><br>
-          <input type="checkbox" id="price2" name="price2" value="25">
-          <label for="price2">$25 - $75</label><br>
-          <input type="checkbox" id="price3" name="price3" value="75">
-          <label for="price3">$75 - $150</label><br>
-          <input type="checkbox" id="price4" name="price4" value="150">
-          <label for="price4">$150 - $300</label><br>
-          <input type="checkbox" id="price5" name="price5" value="300<">
-          <label for="price5">Over $300</label><br>
+          <input type="radio" id="price2" name="filter" onclick="clearPage(); displayProduct(filterPrice(25, 50))">
+          <label for="price2">$25 - $50</label><br>
+          <input type="radio" id="price3" name="filter" onclick="clearPage(); displayProduct(filterPrice(50, 75))">
+          <label for="price3">$50 - $75</label><br>
+          <input type="radio" id="price4" name="filter" onclick="clearPage(); displayProduct(filterPrice(75, 100))">
+          <label for="price4">$75 - $100</label><br>
+          <input type="radio" id="price5" name="filter" onclick="clearPage(); displayProduct(filterPrice(100, Number.POSITIVE_INFINITY))">
+          <label for="price5">Over $100</label><br>
           <br><br>
         </div>
+
+
+        <!--Filter by rating -->
         <div class="searchoptions-item">
           <h2>Filter by Rating:</h2>
-          <input type="radio" id="rating1" name="rating" value="1star">
+          <input type="radio" id="rating1" name="filter" value="1star" onclick="clearPage(); displayProduct(sortRating(filterRating(1)))">
           <label for="rating1">1 Star and Up</label><br>
-          <input type="radio" id="rating2" name="rating" value="2star">
+          <input type="radio" id="rating2" name="filter" value="2star" onclick="clearPage(); displayProduct(sortRating(filterRating(2)))">
           <label for="rating2">2 Stars and Up</label><br>  
-          <input type="radio" id="rating3" name="rating" value="3star">
+          <input type="radio" id="rating3" name="filter" value="3star" onclick="clearPage(); displayProduct(sortRating(filterRating(3)))">
           <label for="rating3">3 Stars and Up</label><br>
-          <input type="radio" id="rating4" name="rating" value="4star">
+          <input type="radio" id="rating4" name="filter" value="4star" onclick="clearPage(); displayProduct(sortRating(filterRating(4)))">
           <label for="rating4">4 Stars and Up</label><br>
-          <input type="radio" id="rating5" name="rating" value="5star">
+          <input type="radio" id="rating5" name="filter" value="5star" onclick="clearPage(); displayProduct(sortRating(filterRating(5)))">
           <label for="rating5">5 Stars and Up</label><br><br>
         </div>
+        <!--sort by price or rating -->
         <div class="searchoptions-item">
           <h2>Sort By:</h2>
-          <input type="radio" id="sort1" name="sort" value="Best rating">
+          <input type="radio" id="sort1" name="filter" value="Best rating" onclick="clearPage(); displayProduct(sortRating(productsArray))">
           <label>Best rating</label><br>
-          <input type="radio" id="sort2" name="sort" value="Lowest price first">
+          <input type="radio" id="sort2" name="filter" value="Lowest price first" onclick="clearPage(); displayProduct(sortPriceLowHigh())">
           <label>Lowest price first</label><br>  
-          <input type="radio" id="sort3" name="sort" value="Highest price first">
+          <input type="radio" id="sort3" name="filter" value="Highest price first" onclick="clearPage(); displayProduct(sortPriceHighLow())">
           <label>Highest price first</label><br><br>
-        </div>
-        <div class="searchoptions-item">
-          <input type="submit" value="Submit">
         </div>
         <hr class="solid">
       </div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img src='images/searchresult/product.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Grey Sony PS1 Analog Controller Playstation
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </span>
-          <span class="row">
-            <h2>
-              Price:
-            </h2>
-            $12.99 CAD
-            <form>
-              <input type="submit" value="Add to Cart">
-            </form>
-          </span>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product1.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              PlayStation System PS1 Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $64.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product2.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Game Boy Pocket Green MGB-001 System Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $89.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product3.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Nintendo 64 System Jungle Green Console N64
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $249.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
-        <div class="grid-item">
-          <img src='images/searchresult/product4.jpg' class='searchresultimage'>
-          <span class="row">
-            <h2>
-              Gamecube System Platinum Silver Console
-            </h2>
-          </span>
-          <span class="rating">
-            <h2>
-              Rating: 
-            </h2>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </span>
-          <span class="row">
-          <h2>
-            Price:
-          </h2>
-          $119.99 CAD
-          <form>
-            <input type="submit" value="Add to Cart">
-          </form>
-        </div>
+
+      <!--Listed items -->
+      <div class="grid-container" id="productGrid">
+
       </div>
     </div>
     <!--
@@ -238,7 +120,18 @@
         </p>
         <p>Email: CST8285@algonquinlive.com</p>
         <p>Phone: 613-555-5555</p>
+        <div class="social">
+          <a href="#">INSTAGRAM </a>
+          <a href="#">FACEBOOK </a>
+          <a href="#">TWITTER </a>
+      </div>
       </div>
     </div>
+
+      <!--
+      JavaScript
+      -->
+    <script src="scriptsearch.js"></script> 
+
   </body>
 </html>
